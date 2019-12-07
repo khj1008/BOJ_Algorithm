@@ -30,7 +30,7 @@ class pair implements Comparable{
 
 public class Main {
 	static int N,M;
-	final static int INF=10000000;
+	final static int INF=1000000000;
 	static int[][] dist=new int[101][101];
 	public static void main(String[] args) throws IOException {
 		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
@@ -57,7 +57,8 @@ public class Main {
 		}
 		for(int i=1; i<=N; i++) {
 			for(int j=1; j<=N; j++) {
-				System.out.print(dist[i][j]+" ");
+				if(dist[i][j]==INF)System.out.print("0 ");
+				else System.out.print(dist[i][j]+" ");
 			}
 			System.out.println();
 		}
